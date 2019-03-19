@@ -1,7 +1,7 @@
 // highlight.js  代码高亮指令
 import Vue from 'vue'
 import hljs from 'highlight.js'
-import 'highlight.js/styles/monokai-sublime.css'
+import 'highlight.js/styles/atelier-savanna-light.css'
 
 let Highlight = {}
 Highlight.install = function (Vue, options) {

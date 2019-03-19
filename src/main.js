@@ -4,6 +4,7 @@ import router from './router/index'
 import store from './store'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
+import '@/assets/global.less'
 // 导入组件库
 import libyVue from './../packages/index'
 // 导入代码高亮

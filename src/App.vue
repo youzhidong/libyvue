@@ -1,29 +1,31 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+      <Nav-top />
+      <div class="line"></div>
+      <Row class="container">
+        <Col span="4">
+          <Nav-left />
+        </Col>
+        <Col span="20" class="rigth-content">
+          <router-view/>
+        </Col>
+      </Row>
   </div>
 </template>
 
-<style lang="less">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+import NavTop from '@/components/navTop.vue'
+import NavLeft from '@/components/navLeft.vue'
+export default {
+  name: 'home',
+  components: {
+    NavTop,
+    NavLeft
   }
 }
+</script>
+<style lang="less">
+  .rigth-content{
+    padding-left: 20px;
+  }
 </style>
